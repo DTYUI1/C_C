@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int task1() {
+int main() {
     int min = 60, max = 90;
     int weihgt;
 
     printf("Please input your weight: ");
-
     scanf("%d", &weihgt);
 
     if (weihgt < min || weihgt > max) {

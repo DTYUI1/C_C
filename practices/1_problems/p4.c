@@ -18,7 +18,7 @@ int main() {
     printf("today = \'%s\'\n", today_date);
 
     char data[9];    
-    printf("Please, write your data: ");
+    printf("Please write your data: ");
     fgets(data, sizeof(data), stdin);
 
     for (int i = 0; i < 8; i++){

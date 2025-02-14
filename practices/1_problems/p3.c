@@ -3,7 +3,7 @@
 int main() {
     char mark;
 
-    printf("Please, write your marking the part of the spaceship\n");
+    printf("Please write your marking the part of the spaceship\n");
     mark = getchar();
 
     if (mark <= 'z' && mark >= 'a' || mark <= 'Z' && mark >= 'A') {
