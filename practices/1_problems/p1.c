@@ -16,19 +16,3 @@ int task1() {
 
     return 0;
 }
-
-int task2() {
-    int max_dist = 500;
-    int dist;
-
-    printf("Please input distantion of the nearest station: ");
-
-    scanf("%d", dist);
-
-    if (dist <= max_dist) {
-        printf("Yuhu! Your lunokhod can to get to this station\n");
-    } else {
-        printf("Sorry, your lunokhod can't get to this station:(\n");
-    }
-}
-
