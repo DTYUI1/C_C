@@ -4,7 +4,6 @@
 #include <ctype.h>
 
 
-
 int standart_sort(const void *a, const void *b) {
     const char * const *str_a = (const char * const *)a; // Приводим к типу char**
     const char * const *str_b = (const char * const *)b;
@@ -92,7 +91,6 @@ int main() {
         printf("Введите строку %d: ", i);
         strings[i] = malloc(256);
         fgets(strings[i], 256, stdin);
-
         if (strlen(strings[i]) > 0 && strings[i][strlen(strings[i])-1] == '\n') {
             strings[i][strlen(strings[i])-1] = '\0';
         }
@@ -102,15 +100,17 @@ int main() {
     fgets(mode, sizeof(mode), stdin);
     short mode_len = strlen(mode);
     if (mode_len > 0 && mode[mode_len-1] == '\n') {
-        mode[mode_len] = '\0';
+        mode[mode_len-1] = '\0';
     }
-    
+    printf("Mode: %s\n", mode);
     for (int i = 0; i < 3; i++) {
-        if (strlen(mode) == strlen(modes[i]) &&
-        strncmp(mode, modes[i], strlen(modes[i])) == 0)
+        if (strncmp(mode, modes[i], mode_len) == 0)
         {
-            printf("lOl\n");
+            printf("Yes, yes\n");
             qsort(strings, n, sizeof(char *), sort_action[i]);
+            break;
+        } else {
+            printf("Mode (%s) is not (%s)\n", mode, modes[i]);
         }
     }
     
