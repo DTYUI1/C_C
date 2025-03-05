@@ -28,5 +28,5 @@ int main(int argc, char *argv[]) {
         printf("GPA: %.1lf\n", students[i].GPA);
     }
     
-
+    free(students);
 }
