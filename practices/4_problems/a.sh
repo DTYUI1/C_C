@@ -1,9 +1,10 @@
 #!/bin/bash
 
-for (( i=1; i<=$1; i++ )); do
-  filename="task$i"
-  touch "$filename.c"  
-  echo "Успешно создан файл: $filename" 
+for (( i=$1; i<=$2; i++ )); do
+  filename="pinMode($i, OUTPUT);"
+  echo "$filename"  
+  # echo "Успешно создан файл: $filename" 
 done
+
 
 
